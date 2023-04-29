@@ -16,13 +16,13 @@ const first = document.getElementById("rock")
 first.addEventListener('click', firstButton)
 
 function firstButton(){
-    let userChoice= "rock"
+    const userChoice= "rock"
     if (userChoice===computerChoice) {
-         alert("You tied!")
+         alert("You tied!");
     } else if (userChoice=== "rock" && computerChoice=== "scissors"){
-       alert("You won!")
+       alert("You won!");
     } else if (userChoice==="rock" && computerChoice==="paper"){
-        alert("You lost!")
+        alert("You lost!");
     }
 }    
     
@@ -31,13 +31,13 @@ const second = document.getElementById("paper")
 second.addEventListener('click', secButton)
 
 function secButton(){
-    let usersChoice= "paper"
-    if (usersChoice===computerChoice) {
-        alert("You tied!")
-    } else if (usersChoice=== "paper" && computerChoice=== "rock"){
-        alert("You won!")
-    } else if (usersChoice==="paper" && computerChoice==="scissors"){
-        alert("You lost")
+    const usersChoice= "paper"
+    if (usersChoice==="paper" && computerChoice==="scissors") {
+        alert("You lost!");
+    } else if (usersChoice===computerChoice){
+        alert("You tied!");
+    } else if (usersChoice==="paper" && computerChoice==="rock"){
+        alert("You won!");
     }
         }
 
@@ -45,13 +45,13 @@ const third = document.getElementById("scissors")
 third.addEventListener('click', thirdButton)
 
 function thirdButton(){
-    let useChoice= "scissors"
-    if (useChoice===computerChoice) {
-        alert("You tied!")
-    } else if (useChoice=== "scissors" && computerChoice=== "paper"){
-        alert("You won!")
-    } else if(useChoice==="scissors" && computerChoice==="rock"){
-        alert("You lost")
+    const useChoice= "scissors"
+    if (useChoice==="scissor" && computerChoice==="paper") {
+        alert("You won!");
+    } else if (useChoice==="scissors" && computerChoice==="rock"){
+        alert("You lost!");
+    } else {
+        
     }
        
 }
