@@ -1,8 +1,8 @@
 const win = 0
 const tie = 0
 const loss = 0
-
-const main = document.querySelector('h2')
+const main = document.querySelector('main')
+for(let i = 0; i < 1; i++) {
 let computerChoice= Math.round(Math.random()*3)
 if (computerChoice === 0){
     computerChoice = "rock"
@@ -12,40 +12,54 @@ if (computerChoice === 0){
     computerChoice = "scissors"
 }
 
-const userChoice = document.getElementById("rock")
+const first = document.getElementById("rock")
+first.addEventListener('click', firstButton)
 
-userChoice.addEventListener('click', yourChoice)
-function yourChoice(){
-    if (userChoice=== "rock" && computerChoice=== "scissors"){
-         console.log("win++")
-}else if (userChoice==="rock" && computerChoice=== "paper"){
-    console.log("loss++")
-} else  {
+function firstButton(){
+    let userChoice= "rock"
+    if (userChoice===computerChoice) {
+         alert("You tied!")
+    } else if (userChoice=== "rock" && computerChoice=== "scissors"){
+       alert("You won!")
+    } else if (userChoice==="rock" && computerChoice==="paper"){
+        alert("You lost!")
+    }
+}    
     
-}
+
+const second = document.getElementById("paper")
+second.addEventListener('click', secButton)
+
+function secButton(){
+    let usersChoice= "paper"
+    if (usersChoice===computerChoice) {
+        alert("You tied!")
+    } else if (usersChoice=== "paper" && computerChoice=== "rock"){
+        alert("You won!")
+    } else if (usersChoice==="paper" && computerChoice==="scissors"){
+        alert("You lost")
+    }
+        }
+
+const third = document.getElementById("scissors")
+third.addEventListener('click', thirdButton)
+
+function thirdButton(){
+    let useChoice= "scissors"
+    if (useChoice===computerChoice) {
+        alert("You tied!")
+    } else if (useChoice=== "scissors" && computerChoice=== "paper"){
+        alert("You won!")
+    } else if(useChoice==="scissors" && computerChoice==="rock"){
+        alert("You lost")
+    }
+       
 }
 
-const usersChoice = document.getElementById("paper")
-usersChoice.addEventListener('click', yourChoice2)
-function yourChoice2(){
-    if (usersChoice === "paper" && computerChoice=== "rock") {
-        console.log("win++")
-    } else if (usersChoice=== "paper" && computerChoice==="scissors"){
-        console.log("loss++")
-    } else {
-        
-    }
-} 
-
-const useChoice = document.getElementById("scissors")
-useChoice.addEventListener('click', yourChoice3)
-function yourChoice3(){
-    if (useChoice=== "scissors" && computerChoice==="paper"){
-        console.log("win++")
-    } else if (useChoice=== "scissors" && computerChoice==="rock") {
-     console.log("loss++")
-    } else {
-        
-    }
-        
 }
+
+
+
+
+
+
