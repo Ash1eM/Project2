@@ -1,6 +1,6 @@
-const win = 0
-const tie = 0
-const loss = 0
+let win = 0
+let tie = 0
+let loss = 0
 const main = document.querySelector('main')
 for(let i = 0; i < 1; i++) {
 let computerChoice= Math.round(Math.random()*3)
@@ -18,11 +18,11 @@ first.addEventListener('click', firstButton)
 function firstButton(){
     const userChoice= "rock"
     if (userChoice===computerChoice) {
-         alert("You tied!");
+       document.getElementById("tie").textContent="Tie:" + tie++
     } else if (userChoice=== "rock" && computerChoice=== "scissors"){
-       alert("You won!");
+        document.getElementById("win").textContent="Win:" + win++
     } else if (userChoice==="rock" && computerChoice==="paper"){
-        alert("You lost!");
+        document.getElementById("loss").textContent="Loss:" + loss++
     }
 }    
     
@@ -33,11 +33,11 @@ second.addEventListener('click', secButton)
 function secButton(){
     const usersChoice= "paper"
     if (usersChoice==="paper" && computerChoice==="scissors") {
-        alert("You lost!");
+        document.getElementById("loss").textContent="Loss:" +loss++
     } else if (usersChoice===computerChoice){
-        alert("You tied!");
+        document.getElementById("tie").textContent="Tie:" + tie++
     } else if (usersChoice==="paper" && computerChoice==="rock"){
-        alert("You won!");
+        document.getElementById("win").textContent="Win:" + win++
     }
         }
 
@@ -46,16 +46,15 @@ third.addEventListener('click', thirdButton)
 
 function thirdButton(){
     const useChoice= "scissors"
-    if (useChoice==="scissor" && computerChoice==="paper") {
-        alert("You won!");
+    if (useChoice==="scissors" && computerChoice==="paper") {
+        document.getElementById("win").textContent= "Win:" +win++
     } else if (useChoice==="scissors" && computerChoice==="rock"){
-        alert("You lost!");
+        document.getElementById("loss").textContent= "Loss:"+loss++
     } else {
-        
+        document.getElementById("tie").textContent= "Tie:" +tie++
     }
        
 }
-
 }
 
 
